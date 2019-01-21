@@ -6,36 +6,8 @@ import { Link } from "react-router-dom";
 import { withStyles } from "@material-ui/core/styles";
 import classNames from "classnames";
 import { ToolbarGroup } from "material-ui";
+import styles from './style';
 
-const styles = theme => ({
-  title: {
-    fontSize: 16,
-    color: theme.palette.common.white,
-    marginRight: theme.spacing.unit * 3
-  },
-  left: {
-    flex: 1,
-    display: "flex"
-  },
-  leftLink: {
-    fontSize: 16,
-    color: theme.palette.common.white,
-    marginRight: theme.spacing.unit * 3
-  },
-  toolbar: {
-    justifyContent: "space-between"
-  },
-  right: {
-    flex: 1,
-    display: "flex",
-    justifyContent: "flex-end"
-  },
-  rightLink: {
-    fontSize: 16,
-    color: theme.palette.common.white,
-    marginLeft: theme.spacing.unit * 3
-  }
-});
 const Navbar = props => {
   const classes = props.classes;
   return (
@@ -51,7 +23,7 @@ const Navbar = props => {
                 style={{ textDecoration: "none" }}
                 className={classNames(classes.title)}
               >
-                {"WOOTECH"}
+                WOOTECH
               </Link>
               <Link
                 variant="h6"
@@ -60,7 +32,7 @@ const Navbar = props => {
                 style={{ textDecoration: "none" }}
                 className={classes.leftLink}
               >
-                {"FAQ"}
+                FAQ
               </Link>
               <Link
                 variant="h6"
@@ -69,15 +41,26 @@ const Navbar = props => {
                 style={{ textDecoration: "none" }}
                 className={classes.leftLink}
               >
-                {"MENTORS"}
+                MENTORS
+              </Link>
+              <Link
+                variant="h6"
+                color="inherit"
+                to="/contact"
+                style={{ textDecoration: "none" }}
+                className={classes.leftLink}
+              >
+                CONTACT
               </Link>
             </ToolbarGroup>
           </div>
           <div className={classes.right}>
-            <Button className={classes.rightLink} color="inherit">
-              SIGN IN
-            </Button>
-            <Button color="inherit">SIGN UP</Button>
+            <Link to="/account/#login" color="inherit" style={{ textDecoration: "none" }}>
+              <Button className={classes.rightLink} color="inherit">LOGIN</Button>
+            </Link>
+            <Link to="/account/#signup" color="inherit" style={{ textDecoration: "none" }}>
+              <Button className={classes.rightLink} color="inherit">SIGN UP</Button>
+            </Link>
           </div>
         </Toolbar>
       </AppBar>

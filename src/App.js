@@ -1,17 +1,18 @@
 import React from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
-
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/index";
 
 const App = () => {
   return (
     <Router>
       <div>
         <Navbar />
+
         <Switch>
           <Route exact path="/" />
-          <Route exact path="/faq" />
+          <Route path="/faq" />
           <Route path="/mentors" />
+          <Route path="/contact" />
           <Route path="/login" />
         </Switch>
       </div>
