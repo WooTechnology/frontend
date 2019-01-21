@@ -1,4 +1,7 @@
 const styles = theme => ({
+    root: {
+        flexGrow: 1,
+    },
     title: {
         fontSize: 16,
         color: theme.palette.common.white,
