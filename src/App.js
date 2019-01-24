@@ -1,20 +1,17 @@
 import React from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
-
-import Navbar from "./components/Navbar";
+import Landing from "./components/Landing";
 
 const App = () => {
   return (
     <Router>
-      <div>
-        <Navbar />
-        <Switch>
-          <Route exact path="/" />
-          <Route exact path="/faq" />
-          <Route path="/mentors" />
-          <Route path="/login" />
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route path="/faq" />
+        <Route path="/mentors" />
+        <Route path="/contact" />
+        <Route path="/login" />
+      </Switch>
     </Router>
   );
 };
