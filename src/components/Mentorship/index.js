@@ -5,7 +5,8 @@ import {
   Grid,
   CardContent,
   Paper,
-  CardHeader
+  CardHeader,
+  CardMedia
 } from "@material-ui/core";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
@@ -19,14 +20,19 @@ const styles = theme => ({
   card: {
     minWidth: 200,
     raised: true,
-    height: 350,
-    width: 250,
+    height: 550,
+    width: 350,
     margin: 20,
     display: "block"
   },
   cardText: {
-    fontSize: 12,
-    fontWeight: "bold"
+    fontSize: 8,
+    fontWeight: "bold",
+    color: "red"
+  },
+  media: {
+    height: 0,
+    paddingTop: "56.25%"
   }
 });
 
@@ -39,33 +45,29 @@ const Mentorship = props => {
       elevation={4}
       gutterBottom
     >
-      <Typography
-        className={styles.header}
-        variant="headline"
-        component="h1"
+      <CardHeader
+        title="MENTORSHIP PROGRAM"
+        className={classes.cardText}
         align="center"
-      >
-        Mentorship Program
-      </Typography>
+      />
       <Grid container spacing={16} wrap>
         <Grid item xs={12} wrap>
-          <Grid
-            container
-            justify="center"
-            spacing={16}
-            direction="row"
-            enum="wrap"
-          >
-            <Card className={classes.card} gutterBottom expandable={true}>
+          <Grid container justify="center" spacing={16} direction="row">
+            <Card shadow={0} className={classes.card} gutterBottom>
+              <CardHeader
+                expand
+                title="GENERAL MENTORSHIP"
+                style={{ fontSize: "8px" }}
+                align="center"
+                //className={classes.cardText}
+              />
+              <CardMedia
+                className={classes.media}
+                image={require("../images/general_mentorship-laptop.jpg")}
+                title="xyz"
+              />
+
               <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="headline"
-                  component="h1"
-                  className={classes.cardText}
-                >
-                  GENERAL MENTORSHIP
-                </Typography>
                 <Typography gutterBottom paragraph wrap>
                   Depending on the availability of mentors and interest of
                   mentees in field, we also do peer-to-peer and
@@ -75,15 +77,20 @@ const Mentorship = props => {
               </CardContent>
             </Card>
             <Card className={classes.card} gutterBottom>
+              <CardHeader
+                title="STUDENT MENTEES TO PROFESSIONAL MENTORS"
+                gutterBottom
+                variant="headline"
+                className={classes.cardText}
+                component="h1"
+                align="center"
+              />
+              <CardMedia
+                className={classes.media}
+                image={require("../images/profession_to_student-laptop.jpg")}
+                title="xyz"
+              />
               <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="headline"
-                  className={classes.cardText}
-                  component="h1"
-                >
-                  STUDENT MENTEES TO PROFESSIONAL MENTORS
-                </Typography>
                 <Typography paragraph>
                   Experience and exposure to the technical industry is very
                   different from what happens in a university. Through the
@@ -96,15 +103,20 @@ const Mentorship = props => {
               </CardContent>
             </Card>
             <Card className={classes.card} gutterBottom>
+              <CardHeader
+                title="PROFESSIONAL MENTEES TO STUDENT MENTORS"
+                gutterBottom
+                variant="headline"
+                className={classes.cardText}
+                component="h1"
+                align="center"
+              />
+              <CardMedia
+                className={classes.media}
+                image={require("../images/student_to_professional-laptop.jpg")}
+                title="xyz"
+              />
               <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="headline"
-                  className={classes.cardText}
-                  component="h1"
-                >
-                  PROFESSIONAL MENTEES TO STUDENT MENTORS
-                </Typography>
                 <Typography paragraph>
                   There are many professionals who have no background in coding
                   but would like to get started. However, it is not as easy for

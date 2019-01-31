@@ -9,7 +9,6 @@ import {
 } from "@material-ui/core";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import { typography } from "material-ui/styles";
 
 const styles = theme => ({
   root: {
@@ -18,18 +17,18 @@ const styles = theme => ({
     margin: "auto"
   },
 
-  card: {
-    minWidth: 200
-  },
   paper: {
     height: 140,
     width: 100
   },
   aboutText: {
-    fontSize: 14
+    fontSize: 14,
+    flexWrap: "wrap"
   },
   headerText: {
-    fontSize: 14
+    fontSize: 14,
+    fontWeight: "bold",
+    marginBottom: theme.spacing.unit * 2
   },
   bullet: {
     display: "inline-block",
@@ -39,7 +38,6 @@ const styles = theme => ({
 });
 const About = props => {
   const { classes } = props;
-  const bullet = <span className={classes.bullet}>•</span>;
   return (
     <Card className={classes.root} elevation={4}>
       <CardContent>
@@ -48,7 +46,6 @@ const About = props => {
           component="h3"
           className={classes.headerText}
           gutterBottom
-          align="center"
         >
           WooTech, standing for "Women Wooing Technology" hopes to provide a
           mentorship platform to women in technology and guide them in their
@@ -57,22 +54,39 @@ const About = props => {
           technology.
         </Typography>
         <Typography
-          variant="h6"
-          component="h3"
+          variant="h4"
+          component="h2"
+          marked="center"
           className={classes.headerText}
           align="center"
         >
           Woo-Tech aims to:
         </Typography>
-        <Typography variant="h6" className={classes.aboutText}>
-          {bullet}Encourage and involve more women in technological fields.
-          <br />
-          {bullet}Helpstudents build careers by matching them with mentors in
-          the professional fields.
-          <br />
-          {bullet}Help professions/non-students seeking to move into technical
-          career by matching them with students
-        </Typography>
+        <Grid
+          container
+          className={classes.root}
+          spacing={16}
+          justify="center"
+          alignItems="center"
+        >
+          <Grid item xs={3}>
+            <Typography className={classes.aboutText} paragraph>
+              Encourage and involve more women in technological fields.
+            </Typography>
+          </Grid>
+          <Grid item xs={3}>
+            <Typography paragraph className={classes.aboutText}>
+              Help students build careers by matching them with mentors in the
+              professional fields.
+            </Typography>
+          </Grid>
+          <Grid item xs={3}>
+            <Typography paragraph className={classes.aboutText}>
+              Help professions/non-students seeking to move into technical
+              career by matching them with students.
+            </Typography>
+          </Grid>
+        </Grid>
       </CardContent>
     </Card>
   );
