@@ -4,7 +4,6 @@ import {
   Card,
   Grid,
   CardContent,
-  Paper,
   CardHeader,
   CardMedia
 } from "@material-ui/core";
@@ -14,7 +13,6 @@ import { withStyles } from "@material-ui/core/styles";
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    margin: "auto",
     padding: theme.spacing.unit * 2
   },
   card: {
@@ -26,9 +24,7 @@ const styles = theme => ({
     display: "block"
   },
   cardText: {
-    fontSize: 8,
-    fontWeight: "bold",
-    color: "red"
+    height: 20
   },
   media: {
     height: 0,
@@ -42,28 +38,27 @@ const Mentorship = props => {
     <Card
       className="classes.root"
       justify-xs-center="center"
-      elevation={4}
-      gutterBottom
     >
       <CardHeader
         title="MENTORSHIP PROGRAM"
-        className={classes.cardText}
         align="center"
       />
       <Grid container spacing={16} wrap>
         <Grid item xs={12} wrap>
           <Grid container justify="center" spacing={16} direction="row">
-            <Card shadow={0} className={classes.card} gutterBottom>
+            <Card shadow={0} className={classes.card}>
               <CardHeader
                 expand
+                gutterBottom
+                variant="headline"
                 title="GENERAL MENTORSHIP"
-                style={{ fontSize: "8px" }}
+                component="h1"
                 align="center"
-                //className={classes.cardText}
+                className={classes.cardText}
               />
               <CardMedia
                 className={classes.media}
-                image={require("../images/general_mentorship-laptop.jpg")}
+                image="../images/general_mentorship-laptop.jpg"
                 title="xyz"
               />
 
@@ -87,7 +82,7 @@ const Mentorship = props => {
               />
               <CardMedia
                 className={classes.media}
-                image={require("../images/profession_to_student-laptop.jpg")}
+                image="../images/profession_to_student-laptop.jpg"
                 title="xyz"
               />
               <CardContent>
@@ -113,7 +108,7 @@ const Mentorship = props => {
               />
               <CardMedia
                 className={classes.media}
-                image={require("../images/student_to_professional-laptop.jpg")}
+                image="images/student_to_professional-laptop.jpg"
                 title="xyz"
               />
               <CardContent>
