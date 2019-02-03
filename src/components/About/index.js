@@ -31,7 +31,6 @@ const styles = theme => ({
     height: 80,
     marginTop: theme.spacing.unit * 4,
     marginBottom: theme.spacing.unit * 4
-    //   alignItems:'center'
   },
   img: {
     margin: "auto",
@@ -80,7 +79,7 @@ const About = props => {
           justify="center"
           alignItems="center"
         >
-          <Grid item xs={3}>
+          <Grid item xs={3} style={{textAlign: 'center'}}>
             <img
               src="../images/encourage_women.png"
               alt="encourage_women"
@@ -90,7 +89,7 @@ const About = props => {
               Encourage and involve more women in technological fields.
             </Typography>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={3} style={{textAlign: 'center'}}>
             <img
               src="../images/mentoring_students.png"
               alt="mentoring_students"
@@ -101,7 +100,7 @@ const About = props => {
               professional fields.
             </Typography>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={3} style={{textAlign: 'center'}}>
             <img
               src="../images/mentoring_professions.png"
               alt="mentoring_professions"

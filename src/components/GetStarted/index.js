@@ -7,8 +7,14 @@ import { Button, CardActionArea, CardActions } from "@material-ui/core";
 const styles = theme => ({
   root: {
     display: "flex",
-
-    justifyContent: "center"
+    justifyContent: "center",
+    paddingTop: 100,
+    paddingBottom: 100,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundImage: "url('laptop.png')",
+    backgroundColor: "rgba(0, 100, 200, 0.2)",
+    backgroundBlendMode: "multiply"
   },
   button: {
     marginTop: theme.spacing.unit * 8
