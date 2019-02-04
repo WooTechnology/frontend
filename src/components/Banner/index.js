@@ -9,7 +9,7 @@ const styles = theme => ({
     width: "100%"
   },
   banner: {
-      height: "80%",
+      height: 650,
       width: "100%"
   },
   bannerText: {
@@ -30,13 +30,13 @@ function Banner(props) {
       <Grid item className={classes.bannerContainer} elevation={1}>
         <img src="banner.jpg" alt="Banner" className={classes.banner} />
         <Grid
-            container
-            direction="column"
-            justify="center"
-            alignItems="center"
+          container
+          direction="column"
+          justify="center"
+          alignItems="center"
         >
-            <Typography className={classes.bannerText} variant="h2" gutterBottom>WooTech</Typography>
-            <Typography className={classes.helperText} variant="h4" gutterBottom>Women Wooing Technology</Typography>
+          <Typography className={classes.bannerText} variant="h2" gutterBottom>WooTech</Typography>
+          <Typography className={classes.helperText} variant="h4" gutterBottom>Women Wooing Technology</Typography>
         </Grid>
       </Grid>
     </Grid>
