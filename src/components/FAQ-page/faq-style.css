@@ -1,15 +1,22 @@
 h1{
     font-family: 'Berkshire Swash';
-    font-size: 40pt;   
+    font-size: 40pt; 
+    margin-top: 2em;  
+    margin-left: 7em ;
 }
 
 hr{
-    margin-left: 7em ; 
-    margin-right: 7em; 
+    margin-left: 2em ; 
+    margin-right: 3em; 
+}
+
+h2{
+    margin-left: 9em ;
+    margin-right: 4em;
 }
 
 h6{
     color: blue;
-    margin-left: 9em ; 
-    margin-right: 9em; 
+    margin-left: 2em ; 
+    margin-right: 4em; 
 }
