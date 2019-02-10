@@ -55,10 +55,10 @@ const Navbar = props => {
             </ToolbarGroup>
           </div>
           <div className={classes.right}>
-            <Link to="/account/#login" color="inherit" style={{ textDecoration: "none" }}>
+            <Link to="/account/login" color="inherit" style={{ textDecoration: "none" }}>
               <Button className={classes.rightLink} color="inherit">LOGIN</Button>
             </Link>
-            <Link to="/account/#signup" color="inherit" style={{ textDecoration: "none" }}>
+            <Link to="/account/signup" color="inherit" style={{ textDecoration: "none" }}>
               <Button className={classes.rightLink} color="inherit">SIGN UP</Button>
             </Link>
           </div>
